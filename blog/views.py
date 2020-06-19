@@ -60,8 +60,10 @@ class PostDeleteView(DeleteView, LoginRequiredMixin, UserPassesTestMixin):
             return True
         return False
 
+
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
 
 class UserPostListView(ListView):
     model = Post
